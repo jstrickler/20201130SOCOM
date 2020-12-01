@@ -17,7 +17,8 @@ class Cat(Animal):  # <3>
         print("Meow meow meow")
 
 class Duck(Animal): # <3>
-    pass  # <5>
+    def quack(self):
+        print("Quack quack quack")# <5>
 
 d = Dog()
 d.speak()
