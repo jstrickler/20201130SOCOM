@@ -24,3 +24,20 @@ print("Function spec for Ham:", inspect.getfullargspec(ham))  # <6>
 print()
 
 print("Current frame:", inspect.getframeinfo(inspect.currentframe()))  # <7>
+
+class A:
+    pass
+
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+class D(B):
+    pass
+
+d = D()
+
+print(inspect.getclasstree([A,B,C,D]))

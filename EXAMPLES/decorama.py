@@ -288,7 +288,7 @@ class DecoSeven():
         return class_
 
 
-@deco_seven
+@DecoSeven
 class TargetClass():
     pass
 

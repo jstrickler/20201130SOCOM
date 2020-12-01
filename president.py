@@ -78,3 +78,6 @@ class President():
     @property
     def party(self):
         return self._party
+
+    def to_json(self):
+        print("Converting to JSON")
