@@ -6,68 +6,106 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>149</width>
-    <height>215</height>
+    <width>466</width>
+    <height>287</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Selectable Buttons</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>141</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Milk</string>
+      </property>
       <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>50</width>
+         <height>20</height>
+        </rect>
+       </property>
        <property name="text">
-        <string>Milk</string>
+        <string>2%</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>107</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Half-and-half</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>76</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Soy Milk</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="rb_none">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>100</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>None</string>
        </property>
        <property name="checked">
         <bool>true</bool>
        </property>
       </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_3">
-       <property name="text">
-        <string>Half-and-half</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="text">
-        <string>Soy Milk</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox">
-       <property name="toolTip">
-        <string>Check to add sugar</string>
-       </property>
-       <property name="text">
-        <string>Sugar</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="cb_extra_shot">
+      <property name="text">
+       <string>Extra shot</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="toolTip">
+       <string>Check to add sugar</string>
+      </property>
+      <property name="text">
+       <string>Sugar</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>149</width>
-     <height>25</height>
+     <width>466</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
