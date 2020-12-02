@@ -10,15 +10,17 @@ saved_pdf_file = 'nasa_iss.pdf'  # <2>
 
 response = requests.get(url)  # <3>
 if response.status_code == requests.codes.OK:  # <4>
+    if response.headers.get('content-type') == 'application/pdf':
 
-    with open(saved_pdf_file, 'wb') as pdf_in:  # <5>
-        pdf_in.write(response.content)  # <6>
+        with open(saved_pdf_file, 'wb') as pdf_in:  # <5>
+            pdf_in.write(response.content)  # <6>
 
-    if sys.platform == 'win32':  # <7>
-        cmd = saved_pdf_file
-    elif sys.platform == 'darwin':
-        cmd = 'open ' + saved_pdf_file
-    else:
-        cmd = 'acroread ' + saved_pdf_file
+        if sys.platform == 'win32':  # <7>
+            cmd = saved_pdf_file
+        elif sys.platform == 'darwin':
+            cmd = 'open ' + saved_pdf_file
+        else:
+            cmd = 'acroread ' + saved_pdf_file
 
-    os.system(cmd)  # <8>
+        os.system(cmd)  # <8>
+

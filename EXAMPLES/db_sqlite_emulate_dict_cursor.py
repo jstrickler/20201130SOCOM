@@ -9,7 +9,7 @@ c = s3conn.cursor()
 
 def row_as_dict(cursor):
     '''Generate rows as dictionaries'''
-    column_names = [desc[0] for desc in cursor.description]
+        column_names = [desc[0] for desc in cursor.description]
     for cursor_row in cursor.fetchall():
         row_dict = dict(zip(column_names, cursor_row))
         yield row_dict
