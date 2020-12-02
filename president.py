@@ -20,7 +20,7 @@ class President():
         # data from the presidents.db database.
         # You will probably need to access it as "DATA/presidents.db"
         # You will no longer need the _mkdate() method
-        with open("DATA/presidents.txt") as pfile:
+        with open("/Users/jstrick/Desktop/py3socom/DATA/presidents.txt") as pfile:
             for line in pfile:
                 flds = line.split(":")
                 if int(flds[0]) == int(index):
