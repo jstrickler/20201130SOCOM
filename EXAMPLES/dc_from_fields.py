@@ -18,7 +18,8 @@ class_name = "Person" #: name to use for class
 fields = [
     ('first_name', str),
     ('last_name', str),
-    ('state', str, field(repr=False))
+    ('state', str, field(repr=False)),
+    ('age', int),
 ]
 
 Person = make_dataclass(class_name, fields)  #: create dataclass
@@ -27,6 +28,6 @@ if __name__ == '__main__':
 
     print(Person)
 
-    p = Person("Guido", "Van Rossum", "OR")
+    p = Person("Guido", "Van Rossum", "OR", 64)
 
     print(p)
