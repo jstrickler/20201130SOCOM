@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pyparsing import *
 
-# http://bob:secret@some.host.com:1234/more/path?p1=v1&p2=v2
+# http://bob:secret@some.host.com:1234/more/path?p1=v1&p2=v2#link
 
 '''   
 URL grammar

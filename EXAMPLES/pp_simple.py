@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Parse a date in the form "MMM, dd"  (using month abbreviations)
+Parse a date in the form "MMM dd"  (using month abbreviations)
 """
 import pyparsing as pp
 
@@ -12,6 +12,7 @@ Date ::= Month ', ' Day
 Month ::= Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec
 Day ::= nums
 """
+
 
 Day = pp.nums
 Month = pp.oneOf('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec')
@@ -26,7 +27,7 @@ samples = [
 
 for sample in samples:
     try:
-        result = Date.scanString(sample)
+        result = Date.searchString(sample)
     except pp.ParseException as err:
         print(err)
     else:

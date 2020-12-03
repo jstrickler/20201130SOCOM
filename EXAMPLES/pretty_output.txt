@@ -1,0 +1,5 @@
+{'part1': [['a', 'b', 'c'], ['d', 'e', 'f']],
+ 'part2': {'blue': [8, 98, -3],
+           'purple': ['Chicago', 'New York', 'L.A.'],
+           'red': 55},
+ 'part3': ['g', 'h', 'i']}

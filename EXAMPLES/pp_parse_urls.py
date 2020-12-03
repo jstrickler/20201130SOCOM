@@ -12,6 +12,7 @@ test_urls = [
   'http://www.notarealsite.com/presidents/26',
   'http://www.notarealsite.com/us/indiana/gary/population',
   'ftp://ftp.info.com/downloads',
+  'https://www.google.com?q=wombat',
   'http://www.notarealsite.com#moose',
   'http://bob:s3cr3t@www.notarealsite.com:8080/presidents/byterm?term=26&name=Roosevelt#bio',
 ]

@@ -24,6 +24,6 @@ input_string = """
 """
 
 for matches, start, stop in ssn_parser.scanString(input_string):  # <5>
-    print(matches, start, stop)
+    print(matches[0], start, stop)
 
 

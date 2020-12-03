@@ -2,7 +2,7 @@
 
 import socket
 import os
-
+from threading import Thread
 
 def setup():
     serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,13 +20,10 @@ def main():
     serv = setup()
     while True:
         (csock, addr) = serv.accept()
-        handle_client(csock)
-
+        client_thread = Thread(target=handle_client, args=(csock,))
+        client_thread.start()
 
 def handle_client(cli_sock):
-    pid = os.fork()  # <1>
-    if pid:  # <2>
-        return
     request = cli_sock.recv(1024)  # <3>
 
     reply = request.upper()[::-1]  # upper & reversed

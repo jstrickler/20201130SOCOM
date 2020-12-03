@@ -7,8 +7,8 @@ from pyparsing import *
     section_tag ::= '[' alphanums+ ']'
     section_data ::= key_value_pair+
     key_value_pair ::= key '=' value
-    key ::= alphanums+
-    value ::= chars+
+    key ::= alphanums+  (except '=')
+    value ::= chars+   (except '=')
 '''
 
 value = Word(' \t' + printables, excludeChars='=')('value')  # <1>
@@ -25,6 +25,9 @@ with open('../DATA/application.ini') as ini_in:
     contents = ini_in.read()  # <10>
 
 for section in ini_file.parseString(contents):  # <11>
+    print("RAW SECTION:", section)
+    print('-' * 60)
     print(section.section)  # <12>
     for key, value in section.keylist:   # <13>
         print('\t{:10s} {}'.format(key, value))
+    print()

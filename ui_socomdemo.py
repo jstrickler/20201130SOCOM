@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'socomdemo.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_SocomDemo(object):
+    def setupUi(self, SocomDemo):
+        SocomDemo.setObjectName("SocomDemo")
+        SocomDemo.resize(473, 419)
+        self.centralwidget = QtWidgets.QWidget(SocomDemo)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_name = QtWidgets.QLabel(self.centralwidget)
+        self.label_name.setObjectName("label_name")
+        self.horizontalLayout.addWidget(self.label_name)
+        self.le_name = QtWidgets.QLineEdit(self.centralwidget)
+        self.le_name.setObjectName("le_name")
+        self.horizontalLayout.addWidget(self.le_name)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.button_doit = QtWidgets.QPushButton(self.centralwidget)
+        self.button_doit.setObjectName("button_doit")
+        self.verticalLayout.addWidget(self.button_doit)
+        self.listWidget = QtWidgets.QListWidget(self.centralwidget)
+        self.listWidget.setObjectName("listWidget")
+        item = QtWidgets.QListWidgetItem()
+        self.listWidget.addItem(item)
+        item = QtWidgets.QListWidgetItem()
+        self.listWidget.addItem(item)
+        item = QtWidgets.QListWidgetItem()
+        self.listWidget.addItem(item)
+        self.verticalLayout.addWidget(self.listWidget)
+        SocomDemo.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(SocomDemo)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 473, 22))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuEid = QtWidgets.QMenu(self.menubar)
+        self.menuEid.setObjectName("menuEid")
+        SocomDemo.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(SocomDemo)
+        self.statusbar.setObjectName("statusbar")
+        SocomDemo.setStatusBar(self.statusbar)
+        self.actionQuit = QtWidgets.QAction(SocomDemo)
+        self.actionQuit.setObjectName("actionQuit")
+        self.actionCut = QtWidgets.QAction(SocomDemo)
+        self.actionCut.setObjectName("actionCut")
+        self.actionCopy = QtWidgets.QAction(SocomDemo)
+        self.actionCopy.setObjectName("actionCopy")
+        self.actionPaste = QtWidgets.QAction(SocomDemo)
+        self.actionPaste.setObjectName("actionPaste")
+        self.menuFile.addAction(self.actionQuit)
+        self.menuEid.addAction(self.actionCut)
+        self.menuEid.addAction(self.actionCopy)
+        self.menuEid.addAction(self.actionPaste)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuEid.menuAction())
+
+        self.retranslateUi(SocomDemo)
+        QtCore.QMetaObject.connectSlotsByName(SocomDemo)
+
+    def retranslateUi(self, SocomDemo):
+        _translate = QtCore.QCoreApplication.translate
+        SocomDemo.setWindowTitle(_translate("SocomDemo", "Socom Demo"))
+        self.label_name.setText(_translate("SocomDemo", "What is your name?"))
+        self.button_doit.setText(_translate("SocomDemo", "Do it!!"))
+        __sortingEnabled = self.listWidget.isSortingEnabled()
+        self.listWidget.setSortingEnabled(False)
+        item = self.listWidget.item(0)
+        item.setText(_translate("SocomDemo", "Spam"))
+        item = self.listWidget.item(1)
+        item.setText(_translate("SocomDemo", "Ham"))
+        item = self.listWidget.item(2)
+        item.setText(_translate("SocomDemo", "Toast"))
+        self.listWidget.setSortingEnabled(__sortingEnabled)
+        self.menuFile.setTitle(_translate("SocomDemo", "File"))
+        self.menuEid.setTitle(_translate("SocomDemo", "Edit"))
+        self.actionQuit.setText(_translate("SocomDemo", "Quit"))
+        self.actionCut.setText(_translate("SocomDemo", "Cut"))
+        self.actionCopy.setText(_translate("SocomDemo", "Copy"))
+        self.actionPaste.setText(_translate("SocomDemo", "Paste"))
+

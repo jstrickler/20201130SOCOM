@@ -8,3 +8,4 @@ print(cmd.split())  # <2>
 print()
 
 print(shlex.split(cmd))  # <3>
+

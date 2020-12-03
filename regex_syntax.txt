@@ -1,0 +1,58 @@
+
+
+ pat     "the pattern"  "pat"   "compatiable types"   "He spat disgustedly"
+
+
+ p.t     . means ANY ONE character
+
+ p\.t    match dot
+
+ p[aeiou]t
+
+ p[a-z_]t
+
+ AA           A
+ p[a-zA-Z0-9_]t
+
+ [0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]
+
+   \d  [0-9]                \D
+   \s  [ \t\n\r\b\f\v]      \S
+   \w  [a-zA-Z0-9_]         \W
+
+  \d\d\d-\d\d-\d\d\d\d
+
+
+  pa+t      p    one-or-more a   t       pat  paaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat
+
+  pa*t      p    zero-or-more a  t    pt  pat  paaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat
+
+  p.*t      p   zero-or-more ANYTHING t
+
+  \d{3}-\d{2}-\d{4}
+
+  "barking\s+pumpkin"
+
+  *   0 or more
+  +   1 or more
+  ?   0 or 1
+  {x}   exactly x
+  {x, y}   from x to y (inclusive)
+  {x,}  at least x
+
+  p[aeiou]{1,2}t
+
+  \bp[aeiou]{1,2}t\b    \b is "word" boundary   \w \W
+
+  ^foo    bar$    ^blah$
+
+
+  ^\d+$      string must be only digits and can't be empty
+
+  ^\d*$      same, but can be empty
+
+  ^\s*\d+\s*$   same, but can have leading OR trailing whitespace
+
+
+
+
